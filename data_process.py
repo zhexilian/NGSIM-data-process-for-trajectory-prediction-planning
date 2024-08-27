@@ -303,11 +303,7 @@ class DataProcess(object):
     
 #%% 读入数据
 if __name__ == '__main__':
-    data1 = pd.read_csv(r'F:\23autumn\cherry\论文\NGSIM\data\0805_0820_us101_smoothed_21_.csv')
+    data1 = pd.read_csv(r'0805_0820_us101_smoothed_21_.csv')
     ngsim = DataProcess(data1)
-    ego,  ground_truth = ngsim.process_data("F:/23autumn/cherry/论文/offline_training/A_processed_data_805_820_v2", False)
-
-#%%
-# data2 = pd.read_csv(r'F:\23autumn\cherry\论文\NGSIM\data\0805_0820_us101_smoothed_21_.csv')
-# data3 = pd.read_csv(r'F:\23autumn\cherry\论文\NGSIM\data\0820_0835_us101_smoothed_21_.csv')
+    ego,  ground_truth = ngsim.process_data("A_processed_data_805_820", False)
 
