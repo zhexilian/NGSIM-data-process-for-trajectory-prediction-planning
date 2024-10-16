@@ -298,12 +298,11 @@ class DataProcess(object):
                 print(f"{sdc_id}_{frames}_{timestep} has done! Progress:{process_num}/{len(self.IDgroup_data)}")
                 del ego, neighbors, ground_truth, ego_map, neighbors_map, ego_command
             gc.collect()
-        #return group,ego,neighbors,ego_map, neighbors_map, ground_truth, ego_command
     
     
-#%% 读入数据
+#%% main
 if __name__ == '__main__':
-    data1 = pd.read_csv(r'0805_0820_us101_smoothed_21_.csv')
+    data1 = pd.read_csv(r'data//0805_0820_us101_smoothed_21_.csv')
     ngsim = DataProcess(data1)
-    ego,  ground_truth = ngsim.process_data("A_processed_data_805_820", False)
+    ngsim.process_data("A_processed_data_805_820", False)
 
