@@ -63,11 +63,3 @@ def scenario_viz(ego, neighbors, ego_map, ground_truth, id, frame, timestep):
     plt.show(block=False)
     plt.pause(0.5)
     plt.close()
-
-#%%
-if __name__ == '__main__':
-    data = np.load("F:/23autumn/cherry/论文/offline_training/A_processed_data_750_805/1851_524_210.npz")
-    scenario_viz(data['ego'], data['neighbors'], data['ego_map'], data['gt_future_states'], 1851,524, 210)
-    # ego = data["ego"]
-    # neighbors = data['neighbors']
-    # gt = data['gt_future_states']
